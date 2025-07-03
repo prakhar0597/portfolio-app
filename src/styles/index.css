@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom dark styles (optional) */
+html {
+  color-scheme: dark;
+}
