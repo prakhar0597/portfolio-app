@@ -8,183 +8,213 @@ const softwareList = [
   {
     name: 'Activepieces',
     link: 'https://active.codecrumble.diy',
-    description: `Activepieces is a no-code business automation tool. Activepieces supports integrations with Google Sheets, OpenAI, Discord, RSS, and over 200 other services.`,
-    tags: ['automation', 'integration', 'nocode']
+    description:
+      "Activepieces is a no-code business automation tool. Supports integrations with Google Sheets, OpenAI, Discord, RSS, and over 200 other services.",
+    tags: ['automation', 'nocode'],
   },
   {
     name: 'Calcom',
     link: 'https://cal.codecrumble.diy',
-    description: `Calendly successor. You are in charge of your own data, workflow, and appearance. Self-hosted or hosted by us.`,
-    tags: ['calendar', 'productivity']
+    description:
+      "Calendly successor. Self-hosted or hosted scheduling tool with full control over your data.",
+    tags: ['calendar', 'productivity'],
   },
   {
     name: 'Dollibar',
     link: 'https://dolly.codecrumble.diy',
-    description: `Dolibarr ERP & CRM helps manage your organization's activities. Ideal for small to large companies.`,
-    tags: ['crm', 'erp', 'business']
+    description:
+      "Dolibarr ERP & CRM helps manage organization's activities like invoices, HR, stocks, etc.",
+    tags: ['business', 'erp'],
   },
   {
     name: 'Appsmith',
     link: 'https://smith.codecrumble.diy',
-    description: `Appsmith is a low-code platform to build custom apps like dashboards, admin panels, and internal tools.`,
-    tags: ['lowcode', 'dev', 'dashboards']
+    description:
+      "Open-source low-code platform for building custom internal apps.",
+    tags: ['lowcode', 'devtools'],
   },
   {
     name: 'Castopod',
     link: 'https://castopod.codecrumble.diy/cp-admin',
-    description: `Castopod is a podcast hosting solution made for audience engagement and interaction.`,
-    tags: ['media', 'podcast']
+    description:
+      "Podcast hosting platform focused on interaction and community.",
+    tags: ['media', 'podcast'],
   },
   {
-    name: 'Convertx',
+    name: 'ConvertX',
     link: 'https://convert.codecrumble.diy',
-    description: `An online file converter. Supports over a thousand formats.`,
-    tags: ['tools', 'file', 'conversion']
+    description:
+      "Online file converter supporting over 1000 formats. Built with TypeScript, Bun, and Elysia.",
+    tags: ['tools', 'files'],
   },
   {
-    name: 'Cyberchef',
+    name: 'CyberChef',
     link: 'https://cyberchef.codecrumble.diy',
-    description: `CyberChef is a web app for encoding, encryption, compression, and more cyber operations.`,
-    tags: ['security', 'devtools']
+    description:
+      "Web app for encoding, encryption, compression, and data analysis.",
+    tags: ['devtools', 'security'],
   },
   {
     name: 'Docmost',
     link: 'https://docs.codecrumble.diy',
-    description: `A collaborative wiki and documentation software.`,
-    tags: ['docs', 'collaboration', 'wiki']
+    description:
+      "Collaborative wiki and documentation software.",
+    tags: ['docs', 'collaboration'],
   },
   {
     name: 'Emby',
     link: 'https://emby.codecrumble.diy',
-    description: `Emby Server is a personal media server with multi-device support.`,
-    tags: ['media', 'server']
+    description:
+      "Personal media server with cross-platform apps.",
+    tags: ['media', 'selfhosted'],
   },
   {
     name: 'FreeScout',
     link: 'https://helpdesk.codecrumble.diy',
-    description: `FreeScout is an open source help desk and shared inbox.`,
-    tags: ['support', 'crm']
+    description:
+      "Lightweight open-source help desk and shared inbox.",
+    tags: ['support', 'productivity'],
   },
   {
     name: 'FreshRSS',
     link: 'https://rss.codecrumble.diy',
-    description: `FreshRSS is a multi-user RSS feed aggregator with anonymous reading.`,
-    tags: ['rss', 'news', 'aggregator']
+    description:
+      "Multi-user RSS feed aggregator with anonymous reading.",
+    tags: ['rss', 'news'],
   },
   {
     name: 'Grocy',
     link: 'https://home.codecrumble.diy',
-    description: `Grocy is a self-hosted groceries & household management solution.`,
-    tags: ['home', 'productivity']
+    description:
+      "Self-hosted groceries and household management system.",
+    tags: ['home', 'inventory'],
   },
   {
     name: 'Hoarder (Karakeep)',
     link: 'https://aibookmark.codecrumble.diy',
-    description: `Karakeep is a self-hostable bookmark-everything app with AI.`,
-    tags: ['bookmarks', 'ai', 'productivity']
+    description:
+      "AI-powered bookmark manager for data hoarders.",
+    tags: ['tools', 'ai'],
   },
   {
     name: 'Invoice Ninja',
     link: 'https://invoice.codecrumble.diy',
-    description: `Invoice, quote, project and time-tracking app.`,
-    tags: ['invoices', 'business']
+    description:
+      "App for invoices, quotes, project, and time-tracking.",
+    tags: ['finance', 'business'],
   },
   {
     name: 'IT Tools',
     link: 'https://ittools.codecrumble.diy',
-    description: `Handy online tools for developers, with great UX.`,
-    tags: ['devtools', 'utilities']
+    description:
+      "Handy online tools for developers with excellent UX.",
+    tags: ['devtools', 'utilities'],
   },
   {
     name: 'Leantime',
     link: 'https://leantime.codecrumble.diy',
-    description: `Leantime is a project management system for non-project managers.`,
-    tags: ['project', 'management']
+    description:
+      "Project management system for non-project managers.",
+    tags: ['project', 'pm'],
   },
   {
     name: 'Mautic5',
     link: 'https://mautic.codecrumble.diy',
-    description: `Mautic is a marketing automation product focused on privacy.`,
-    tags: ['marketing', 'automation']
+    description:
+      "Marketing automation focused on privacy and extensibility.",
+    tags: ['marketing', 'automation'],
   },
   {
     name: 'Whoogle',
     link: 'https://whoogle.codecrumble.diy',
-    description: `A self-hosted, ad-free, privacy-respecting metasearch engine.`,
-    tags: ['search', 'privacy']
+    description:
+      "Self-hosted, ad-free, privacy-first metasearch engine.",
+    tags: ['search', 'privacy'],
   },
   {
     name: 'Mealie',
     link: 'https://mealie.codecrumble.diy',
-    description: `Mealie is a recipe manager, meal planner and shopping list.`,
-    tags: ['cooking', 'planner']
+    description:
+      "Recipe manager, meal planner, and shopping list tool.",
+    tags: ['home', 'food'],
   },
   {
     name: 'Memos',
     link: 'https://memos.codecrumble.diy',
-    description: `A knowledge management and note-taking platform for privacy-conscious users.`,
-    tags: ['notes', 'knowledge']
+    description:
+      "Privacy-first knowledge management and note-taking platform.",
+    tags: ['notes', 'productivity'],
   },
   {
     name: 'OpenWeb-UI',
     link: 'https://ai.codecrumble.diy',
-    description: `A self-hosted AI platform supporting multiple LLM backends.`,
-    tags: ['ai', 'platform']
+    description:
+      "Self-hosted, extensible AI platform with RAG support.",
+    tags: ['ai', 'selfhosted'],
   },
   {
     name: 'Plane',
     link: 'https://plane.codecrumble.diy',
-    description: `JIRA, Linear, Asana alternative for tracking issues and roadmaps.`,
-    tags: ['project', 'dev']
+    description:
+      "Alternative to JIRA, Linear, Asana for issue and sprint tracking.",
+    tags: ['project', 'pm'],
   },
   {
     name: 'Reactive Resume',
     link: 'https://resume.codecrumble.diy',
-    description: `A privacy-first, customizable resume builder.`,
-    tags: ['resume', 'tools']
+    description:
+      "Privacy-first resume builder with drag-and-drop and templates.",
+    tags: ['resume', 'tools'],
   },
   {
     name: 'RocketChat',
     link: 'https://rocket.codecrumble.diy',
-    description: `The secure communications platform alternative to Slack.`,
-    tags: ['chat', 'team', 'collaboration']
+    description:
+      "Secure communications platform alternative to Slack.",
+    tags: ['chat', 'collaboration'],
   },
   {
     name: 'SearXNG',
     link: 'https://find.codecrumble.diy',
-    description: `Free metasearch engine aggregating results from various sources.`,
-    tags: ['search', 'privacy']
+    description:
+      "Metasearch engine aggregating results from various sources.",
+    tags: ['search', 'privacy'],
   },
   {
-    name: 'Web-Check',
+    name: 'Web Check',
     link: 'https://osint.codecrumble.diy',
-    description: `All-in-one OSINT tool for analyzing websites' technologies and vulnerabilities.`,
-    tags: ['security', 'osint']
+    description:
+      "OSINT dashboard for analyzing websites and tech stack.",
+    tags: ['security', 'osint'],
   },
   {
     name: 'Sterling PDF',
     link: 'https://pdf.codecrumble.diy',
-    description: `Perform various operations on PDF files (split, merge, compress, etc).`,
-    tags: ['pdf', 'tools']
+    description:
+      "Web app to split, merge, convert, and compress PDFs.",
+    tags: ['pdf', 'tools'],
   },
   {
     name: 'Kutt URL Shortener',
     link: 'https://kuttt.co',
-    description: `A modern URL shortener with support for custom domains and stats.`,
-    tags: ['url', 'tools']
+    description:
+      "Modern URL shortener with support for custom domains.",
+    tags: ['tools', 'links'],
   },
   {
     name: 'Mattermost',
     link: 'https://slack.trackalways.in',
-    description: `A secure collaboration platform for teams and enterprises.`,
-    tags: ['chat', 'team', 'productivity']
+    description:
+      "Secure collaboration platform for critical team work.",
+    tags: ['chat', 'collaboration'],
   },
   {
     name: 'NocoDB',
     link: 'https://noco.codecrumble.diy',
-    description: `An Airtable alternative for building online databases.`,
-    tags: ['database', 'nocode']
-  }
+    description:
+      "Open-source Airtable alternative for database management.",
+    tags: ['database', 'nocode'],
+  },
 ];
 
 const getAllTags = (list) => {
@@ -193,99 +223,102 @@ const getAllTags = (list) => {
   return Array.from(tagSet);
 };
 
-const Portfolio = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const App = () => {
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedTag, setSelectedTag] = useState('');
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [sortOrder, setSortOrder] = useState('asc');
+  const [sortTagOrder, setSortTagOrder] = useState('asc');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedTag, setSelectedTag] = useState('');
+  const [sortOrder, setSortOrder] = useState('asc');
+  const tags = getAllTags(softwareList).sort((a, b) => sortTagOrder === 'asc' ? a.localeCompare(b) : b.localeCompare(a));
 
-  const allTags = getAllTags(softwareList);
-
-  const filteredList = softwareList.filter(({ name, description, tags }) => {
-    const matchesSearch = (name + ' ' + description).toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesTag = selectedTag ? tags?.includes(selectedTag) : true;
-    return matchesSearch && matchesTag;
-  });
+  const filteredSoftware = softwareList
+    .filter((s) =>
+      s.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+      (selectedTag === '' || s.tags.includes(selectedTag))
+    )
+    .sort((a, b) =>
+      sortOrder === 'asc'
+        ? a.name.localeCompare(b.name)
+        : b.name.localeCompare(a.name)
+    );
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-6">
-      <div className="mb-4 max-w-xl mx-auto">
+    <div className="min-h-screen bg-gray-950 text-white p-4">
+      <div className="flex flex-col md:flex-row items-center gap-4 mb-6">
         <Input
-          type="text"
           placeholder="Search software..."
-          className="bg-gray-800 text-white placeholder-gray-400 border border-gray-600 mb-4"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="w-full md:w-1/2"
         />
         <div className="flex flex-wrap gap-2">
+          <Button onClick={() => setSortTagOrder(sortTagOrder === 'asc' ? 'desc' : 'asc')}>
+            Sort Tags: {sortTagOrder === 'asc' ? 'A–Z' : 'Z–A'}
+          </Button>
           <Button
             variant={selectedTag === '' ? 'default' : 'outline'}
-            className="bg-gray-700 hover:bg-gray-600"
             onClick={() => setSelectedTag('')}
           >
             All
           </Button>
-          {allTags.map((tag) => (
+          {tags.map((tag) => (
             <Button
               key={tag}
               variant={selectedTag === tag ? 'default' : 'outline'}
-              className="bg-gray-700 hover:bg-gray-600 capitalize"
               onClick={() => setSelectedTag(tag)}
             >
               {tag}
             </Button>
           ))}
         </div>
+        <Button onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}>
+          Sort: {sortOrder === 'asc' ? 'A–Z' : 'Z–A'}
+        </Button>
       </div>
-
       <TooltipProvider>
-        {allTags.map((tag) => {
-          const taggedItems = filteredList.filter((item) => item.tags?.includes(tag));
-          if (!taggedItems.length) return null;
-
-          return (
-            <div key={tag} className="mb-10">
-              <h2 className="text-2xl font-bold capitalize mb-4 border-b border-gray-700 pb-1">{tag}</h2>
-              <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {taggedItems.map((software, index) => (
-                  <Tooltip key={`${tag}-${index}`}>
-                    <TooltipTrigger asChild>
-                      <div
-                        onMouseEnter={() => setHoveredIndex(`${tag}-${index}`)}
-                        onMouseLeave={() => setHoveredIndex(null)}
-                      >
-                        <a href={software.link} target="_blank" rel="noopener noreferrer">
-                          <Card className="bg-gray-800 hover:bg-gray-700 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl animate-fadeIn">
-                            <CardContent className="p-6">
-                              <h2 className="text-xl font-semibold mb-2">{software.name}</h2>
-                              <p className="text-gray-300 text-sm line-clamp-3">{software.description}</p>
-                            </CardContent>
-                          </Card>
-                        </a>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {filteredSoftware.map((software) => (
+            <Tooltip key={software.name} delayDuration={0}>
+              <TooltipTrigger asChild>
+                <a
+                  href={software.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative block bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  <Card className="h-full">
+                    <CardContent className="space-y-2">
+                      <h3 className="text-xl font-semibold">{software.name}</h3>
+                      <p className="text-sm text-gray-400">{software.description}</p>
+                      <div className="flex flex-wrap gap-1 mt-2">
+                        {software.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="bg-gray-700 text-xs px-2 py-1 rounded-full text-white"
+                          >
+                            {tag}
+                          </span>
+                        ))}
                       </div>
-                    </TooltipTrigger>
-                    <TooltipContent className="bg-black border border-gray-700 w-80 p-0 overflow-hidden">
-                      {hoveredIndex === `${tag}-${index}` ? (
-                        <iframe
-                          src={software.link}
-                          title={`${software.name} Preview`}
-                          className="w-full h-60 border-none"
-                          loading="lazy"
-                        />
-                      ) : (
-                        <div className="w-full h-60 flex items-center justify-center text-gray-500 text-sm italic">
-                          Hover to load preview
-                        </div>
-                      )}
-                    </TooltipContent>
-                  </Tooltip>
-                ))}
-              </div>
-            </div>
-          );
-        })}
+                    </CardContent>
+                  </Card>
+                </a>
+              </TooltipTrigger>
+              <TooltipContent className="p-0 w-[300px] h-[200px] bg-black overflow-hidden rounded">
+                <iframe
+                  src={software.link}
+                  className="w-full h-full border-0"
+                  sandbox="allow-same-origin allow-scripts"
+                ></iframe>
+              </TooltipContent>
+            </Tooltip>
+          ))}
+        </div>
       </TooltipProvider>
     </div>
   );
 };
 
-export default Portfolio;
+export default App;
