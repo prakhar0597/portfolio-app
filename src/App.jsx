@@ -8,26 +8,26 @@ const softwareList = [
   {
     name: 'Activepieces',
     link: 'https://active.codecrumble.diy',
-    description: `Activepieces is a no-code business automation tool. Activepieces supports integrations with Google Sheets, OpenAI, Discord, RSS, and over 200 other services.`,
-    tags: ['automation', 'integration', 'nocode']
+    description: `Activepieces is a business automation tool. Activepieces supports integrations with Google Sheets, OpenAI, Discord, RSS, and over 200 other services.`,
+    tags: ['integration']
   },
   {
     name: 'Calcom',
     link: 'https://cal.codecrumble.diy',
     description: `Calendly successor. You are in charge of your own data, workflow, and appearance. Self-hosted or hosted by us.`,
-    tags: ['calendar', 'productivity']
+    tags: ['calendar']
   },
   {
     name: 'Dollibar',
     link: 'https://dolly.codecrumble.diy',
     description: `Dolibarr ERP & CRM helps manage your organization's activities. Ideal for small to large companies.`,
-    tags: ['crm', 'erp', 'business']
+    tags: ['crm', 'erp']
   },
   {
     name: 'Appsmith',
     link: 'https://smith.codecrumble.diy',
-    description: `Appsmith is a low-code platform to build custom apps like dashboards, admin panels, and internal tools.`,
-    tags: ['lowcode', 'dev', 'dashboards']
+    description: `Appsmith is a platform to build custom apps like dashboards, admin panels, and internal tools.`,
+    tags: ['dashboards']
   },
   {
     name: 'Castopod',
@@ -39,7 +39,7 @@ const softwareList = [
     name: 'Convertx',
     link: 'https://convert.codecrumble.diy',
     description: `An online file converter. Supports over a thousand formats.`,
-    tags: ['tools', 'file', 'conversion']
+    tags: ['tools']
   },
   {
     name: 'Cyberchef',
@@ -51,79 +51,79 @@ const softwareList = [
     name: 'Docmost',
     link: 'https://docs.codecrumble.diy',
     description: `A collaborative wiki and documentation software.`,
-    tags: ['docs', 'collaboration', 'wiki']
+    tags: ['docs', 'wiki']
   },
   {
     name: 'Emby',
     link: 'https://emby.codecrumble.diy',
     description: `Emby Server is a personal media server with multi-device support.`,
-    tags: ['media', 'server']
+    tags: ['media']
   },
   {
     name: 'FreeScout',
     link: 'https://helpdesk.codecrumble.diy',
     description: `FreeScout is an open source help desk and shared inbox.`,
-    tags: ['support', 'crm']
+    tags: ['support']
   },
   {
     name: 'FreshRSS',
     link: 'https://rss.codecrumble.diy',
     description: `FreshRSS is a multi-user RSS feed aggregator with anonymous reading.`,
-    tags: ['rss', 'news', 'aggregator']
+    tags: ['news']
   },
   {
     name: 'Grocy',
     link: 'https://home.codecrumble.diy',
     description: `Grocy is a self-hosted groceries & household management solution.`,
-    tags: ['home', 'productivity']
+    tags: ['cooking']
   },
   {
     name: 'Hoarder (Karakeep)',
     link: 'https://aibookmark.codecrumble.diy',
     description: `Karakeep is a self-hostable bookmark-everything app with AI.`,
-    tags: ['bookmarks', 'ai', 'productivity']
+    tags: ['bookmarks', 'ai']
   },
   {
     name: 'Invoice Ninja',
     link: 'https://invoice.codecrumble.diy',
     description: `Invoice, quote, project and time-tracking app.`,
-    tags: ['invoices', 'business']
+    tags: ['invoices']
   },
   {
     name: 'IT Tools',
     link: 'https://ittools.codecrumble.diy',
     description: `Handy online tools for developers, with great UX.`,
-    tags: ['devtools', 'utilities']
+    tags: ['devtools']
   },
   {
     name: 'Leantime',
     link: 'https://leantime.codecrumble.diy',
     description: `Leantime is a project management system for non-project managers.`,
-    tags: ['project', 'management']
+    tags: ['project']
   },
   {
     name: 'Mautic5',
     link: 'https://mautic.codecrumble.diy',
     description: `Mautic is a marketing automation product focused on privacy.`,
-    tags: ['marketing', 'automation']
+    tags: ['marketing']
   },
   {
     name: 'Whoogle',
     link: 'https://whoogle.codecrumble.diy',
     description: `A self-hosted, ad-free, privacy-respecting metasearch engine.`,
-    tags: ['search', 'privacy']
+    tags: ['search']
   },
   {
     name: 'Mealie',
     link: 'https://mealie.codecrumble.diy',
     description: `Mealie is a recipe manager, meal planner and shopping list.`,
-    tags: ['cooking', 'planner']
+    tags: ['cooking']
   },
   {
     name: 'Memos',
     link: 'https://memos.codecrumble.diy',
     description: `A knowledge management and note-taking platform for privacy-conscious users.`,
-    tags: ['notes', 'knowledge']
+    tags: ['notes']
   },
   {
     name: 'OpenWeb-UI',
@@ -147,19 +147,19 @@ const softwareList = [
     name: 'RocketChat',
     link: 'https://rocket.codecrumble.diy',
     description: `The secure communications platform alternative to Slack.`,
-    tags: ['chat', 'team', 'collaboration']
+    tags: ['chat']
   },
   {
     name: 'SearXNG',
     link: 'https://find.codecrumble.diy',
     description: `Free metasearch engine aggregating results from various sources.`,
-    tags: ['search', 'privacy']
+    tags: ['search']
   },
   {
     name: 'Web-Check',
     link: 'https://osint.codecrumble.diy',
     description: `All-in-one OSINT tool for analyzing websites' technologies and vulnerabilities.`,
-    tags: ['security', 'osint']
+    tags: ['security']
   },
   {
     name: 'Sterling PDF',
@@ -177,13 +177,13 @@ const softwareList = [
     name: 'Mattermost',
     link: 'https://slack.trackalways.in',
     description: `A secure collaboration platform for teams and enterprises.`,
-    tags: ['chat', 'team', 'productivity']
+    tags: ['chat']
   },
   {
     name: 'NocoDB',
     link: 'https://noco.codecrumble.diy',
     description: `An Airtable alternative for building online databases.`,
-    tags: ['database', 'nocode']
+    tags: ['database']
   }
 ];
 
