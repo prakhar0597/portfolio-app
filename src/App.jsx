@@ -197,8 +197,10 @@ const Portfolio = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTag, setSelectedTag] = useState('');
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [tagSortOrder, setTagSortOrder] = useState('asc');
 
   const allTags = getAllTags(softwareList);
+  const sortedTags = allTags.sort((a, b) => tagSortOrder === 'asc' ? a.localeCompare(b) : b.localeCompare(a));
 
   const filteredList = softwareList.filter(({ name, description, tags }) => {
     const matchesSearch = (name + ' ' + description).toLowerCase().includes(searchTerm.toLowerCase());
@@ -208,15 +210,16 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white p-6">
-      <div className="mb-4 max-w-xl mx-auto">
+      <div className="mb-8 max-w-full mx-auto">
         <Input
           type="text"
           placeholder="Search software..."
-          className="bg-gray-800 text-white placeholder-gray-400 border border-gray-600 mb-4"
+          className="w-full bg-gray-800 text-white placeholder-gray-400 border border-gray-600 mb-8"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <div className="flex flex-wrap gap-2">
+
+        <div className="flex flex-wrap gap-2 mb-8">
           <Button
             variant={selectedTag === '' ? 'default' : 'outline'}
             className="bg-gray-700 hover:bg-gray-600"
@@ -235,10 +238,22 @@ const Portfolio = () => {
             </Button>
           ))}
         </div>
+
+        <div className="mb-10">
+          <label className="mr-2 font-medium">Sort Categories:</label>
+          <select
+            className="bg-gray-800 text-white border border-gray-600 rounded px-3 py-1"
+            value={tagSortOrder}
+            onChange={(e) => setTagSortOrder(e.target.value)}
+          >
+            <option value="asc">A–Z</option>
+            <option value="desc">Z–A</option>
+          </select>
+        </div>
       </div>
 
       <TooltipProvider>
-        {allTags.map((tag) => {
+        {sortedTags.map((tag) => {
           const taggedItems = filteredList.filter((item) => item.tags?.includes(tag));
           if (!taggedItems.length) return null;
 
