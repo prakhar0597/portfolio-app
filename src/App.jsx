@@ -21,7 +21,7 @@ const softwareList = [
     name: 'Dollibar',
     link: 'https://dolly.codecrumble.diy',
     description: `Dolibarr ERP & CRM helps manage your organization's activities. Ideal for small to large companies.`,
-    tags: ['crm', 'erp']
+    tags: ['crm']
   },
   {
     name: 'Appsmith',
@@ -33,7 +33,7 @@ const softwareList = [
     name: 'Castopod',
     link: 'https://castopod.codecrumble.diy/cp-admin',
     description: `Castopod is a podcast hosting solution made for audience engagement and interaction.`,
-    tags: ['media', 'podcast']
+    tags: ['media']
   },
   {
     name: 'Convertx',
@@ -45,13 +45,13 @@ const softwareList = [
     name: 'Cyberchef',
     link: 'https://cyberchef.codecrumble.diy',
     description: `CyberChef is a web app for encoding, encryption, compression, and more cyber operations.`,
-    tags: ['security', 'devtools']
+    tags: ['security']
   },
   {
     name: 'Docmost',
     link: 'https://docs.codecrumble.diy',
     description: `A collaborative wiki and documentation software.`,
-    tags: ['docs', 'wiki']
+    tags: ['wiki']
   },
   {
     name: 'Emby',
@@ -81,7 +81,7 @@ const softwareList = [
     name: 'Hoarder (Karakeep)',
     link: 'https://aibookmark.codecrumble.diy',
     description: `Karakeep is a self-hostable bookmark-everything app with AI.`,
-    tags: ['bookmarks', 'ai']
+    tags: ['bookmarks']
   },
   {
     name: 'Invoice Ninja',
@@ -129,19 +129,19 @@ const softwareList = [
     name: 'OpenWeb-UI',
     link: 'https://ai.codecrumble.diy',
     description: `A self-hosted AI platform supporting multiple LLM backends.`,
-    tags: ['ai', 'platform']
+    tags: ['platform']
   },
   {
     name: 'Plane',
     link: 'https://plane.codecrumble.diy',
     description: `JIRA, Linear, Asana alternative for tracking issues and roadmaps.`,
-    tags: ['project', 'dev']
+    tags: ['dev']
   },
   {
     name: 'Reactive Resume',
     link: 'https://resume.codecrumble.diy',
     description: `A privacy-first, customizable resume builder.`,
-    tags: ['resume', 'tools']
+    tags: ['resume']
   },
   {
     name: 'RocketChat',
@@ -165,13 +165,13 @@ const softwareList = [
     name: 'Sterling PDF',
     link: 'https://pdf.codecrumble.diy',
     description: `Perform various operations on PDF files (split, merge, compress, etc).`,
-    tags: ['pdf', 'tools']
+    tags: ['pdf']
   },
   {
     name: 'Kutt URL Shortener',
     link: 'https://kuttt.co',
     description: `A modern URL shortener with support for custom domains and stats.`,
-    tags: ['url', 'tools']
+    tags: ['url']
   },
   {
     name: 'Mattermost',
