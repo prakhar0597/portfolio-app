@@ -268,21 +268,29 @@ const Portfolio = () => {
     return matchesSearch && matchesTag;
   });
 
+  const tagIcons = {
+    integration: "🔗", calendar: "📅", crm: "🏢", dashboards: "📊", media: "🎙️",
+    tools: "🛠️", support: "💬", household: "🏠", notes: "📝", chat: "💬",
+    dev: "💻", resume: "📄", pdf: "📑", url: "🔗", database: "🗄️",
+    security: "🔒", search: "🔍", marketing: "📈", news: "📰", platform: "🌐",
+    invoices: "🧾", wiki: "📚"
+  };
+
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-6">
-      <div className="mb-8 max-w-full mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-8 px-4 sm:px-6 lg:px-12">
+      <div className="max-w-screen-xl mx-auto">
         <Input
           type="text"
-          placeholder="Search software..."
-          className="w-full bg-gray-800 text-white placeholder-gray-400 border border-gray-600 mb-8"
+          placeholder="🔍 Search for software..."
+          className="w-full bg-gray-800 text-white placeholder-gray-400 border border-gray-600 rounded-xl shadow-inner focus:ring-2 focus:ring-blue-500 mb-8"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
 
-        <div className="flex flex-wrap gap-2 mb-8">
+        <div className="flex flex-wrap gap-3 mb-8 justify-center">
           <Button
             variant={selectedTag === '' ? 'default' : 'outline'}
-            className="bg-gray-700 hover:bg-gray-600"
+            className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-purple-600 hover:to-indigo-600 rounded-full px-4 py-1.5 shadow"
             onClick={() => setSelectedTag('')}
           >
             All
@@ -291,18 +299,19 @@ const Portfolio = () => {
             <Button
               key={tag}
               variant={selectedTag === tag ? 'default' : 'outline'}
-              className="bg-gray-700 hover:bg-gray-600 capitalize"
+              className={`capitalize rounded-full px-4 py-1.5 shadow transition-all duration-300 ${selectedTag === tag ? 'bg-gradient-to-r from-pink-500 to-yellow-500 text-white' : 'bg-gray-700 hover:bg-gray-600 text-gray-200'}`}
               onClick={() => setSelectedTag(tag)}
             >
+              <span className="mr-1">{tagIcons[tag] || '🏷️'}</span>
               {tag}
             </Button>
           ))}
         </div>
 
-        <div className="mb-10">
-          <label className="mr-2 font-medium">Sort Categories:</label>
+        <div className="mb-10 text-center">
+          <label className="mr-2 font-medium text-gray-300">Sort Categories:</label>
           <select
-            className="bg-gray-800 text-white border border-gray-600 rounded px-3 py-1"
+            className="bg-gray-800 text-white border border-gray-600 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             value={tagSortOrder}
             onChange={(e) => setTagSortOrder(e.target.value)}
           >
@@ -310,57 +319,67 @@ const Portfolio = () => {
             <option value="desc">Z–A</option>
           </select>
         </div>
-      </div>
 
-      <TooltipProvider>
-        {sortedTags.map((tag) => {
-          const taggedItems = filteredList.filter((item) => item.tags?.includes(tag));
-          if (!taggedItems.length) return null;
+        <TooltipProvider>
+          {sortedTags.map((tag) => {
+            const taggedItems = filteredList.filter((item) => item.tags?.includes(tag));
+            if (!taggedItems.length) return null;
 
-          return (
-            <div key={tag} className="mb-10">
-              <h2 className="text-2xl font-bold capitalize mb-4 border-b border-gray-700 pb-1">{tag}</h2>
-              <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {taggedItems.map((software, index) => (
-                  <Tooltip key={`${tag}-${index}`}>
-                    <TooltipTrigger asChild>
-                      <div
-                        onMouseEnter={() => setHoveredIndex(`${tag}-${index}`)}
-                        onMouseLeave={() => setHoveredIndex(null)}
-                      >
-                        <a href={software.link} target="_blank" rel="noopener noreferrer">
-                          <Card className="bg-gray-800 hover:bg-gray-700 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl animate-fadeIn">
-                            <CardContent className="p-6">
-                              <h2 className="text-xl font-semibold mb-2">{software.name}</h2>
-                              <p className="text-gray-300 text-sm line-clamp-3 mb-2">{software.description}</p>
-                              {software.username && software.password && (
-                                <>
-                                  <p className="text-gray-400 text-xs">Username: {software.username}</p>
-                                  <p className="text-gray-400 text-xs">Password: {software.password}</p>
-                                </>
-                              )}
-                            </CardContent>
-                          </Card>
-                        </a>
-                      </div>
-                    </TooltipTrigger>
-                    {hoveredIndex === `${tag}-${index}` && (
-                      <TooltipContent className="bg-black border border-gray-700 w-80 p-0 overflow-hidden">
-                        <iframe
-                          src={software.link}
-                          title={`${software.name} Preview`}
-                          className="w-full h-60 border-none"
-                          loading="lazy"
-                        />
-                      </TooltipContent>
-                    )}
-                  </Tooltip>
-                ))}
+            return (
+              <div key={tag} className="mb-16">
+                <h2 className="text-3xl font-bold capitalize mb-6 text-blue-400 border-b border-gray-700 pb-2 text-center">
+                  {tagIcons[tag] || '🏷️'} {tag}
+                </h2>
+                <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                  {taggedItems.map((software, index) => (
+                    <Tooltip key={`${tag}-${index}`}>
+                      <TooltipTrigger asChild>
+                        <div
+                          onMouseEnter={() => setHoveredIndex(`${tag}-${index}`)}
+                          onMouseLeave={() => setHoveredIndex(null)}
+                        >
+                          <a href={software.link} target="_blank" rel="noopener noreferrer">
+                            <Card className="backdrop-blur-sm bg-white/10 hover:bg-white/20 hover:ring-2 hover:ring-blue-400/30 transition-all rounded-2xl shadow-xl hover:scale-[1.03] hover:shadow-2xl animate-fadeIn border border-gray-700">
+                              <CardContent className="p-6">
+                                <h2 className="text-xl font-bold mb-2 text-white tracking-wide">
+                                  {software.name}
+                                </h2>
+                                <p className="text-gray-300 text-sm mb-3 line-clamp-3 italic">
+                                  {software.description}
+                                </p>
+                                {software.username && software.password && (
+                                  <div className="text-xs text-gray-400 space-y-1">
+                                    <p><span className="font-semibold text-gray-300">Username:</span> {software.username}</p>
+                                    <p><span className="font-semibold text-gray-300">Password:</span> {software.password}</p>
+                                  </div>
+                                )}
+                              </CardContent>
+                            </Card>
+                          </a>
+                        </div>
+                      </TooltipTrigger>
+                      {hoveredIndex === `${tag}-${index}` && (
+                        <TooltipContent
+                          side="bottom"
+                          sideOffset={12}
+                          className="w-[90vw] max-w-screen-xl min-h-[300px] bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-black/90 backdrop-blur-lg text-white p-6 overflow-hidden rounded-xl border border-gray-700 shadow-2xl animate-fade-in"
+                        >
+                          <iframe
+                            src={software.link}
+                            title={`${software.name} Preview`}
+                            className="w-full h-60 border-none rounded-b-xl"
+                            loading="lazy"
+                          />
+                        </TooltipContent>
+                      )}
+                    </Tooltip>
+                  ))}
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </TooltipProvider>
+            );
+          })}
+        </TooltipProvider>
+      </div>
     </div>
   );
 };
