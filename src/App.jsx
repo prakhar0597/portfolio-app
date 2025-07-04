@@ -9,181 +9,241 @@ const softwareList = [
     name: 'Activepieces',
     link: 'https://active.codecrumble.diy',
     description: `Activepieces is a business automation tool. Activepieces supports integrations with Google Sheets, OpenAI, Discord, RSS, and over 200 other services.`,
-    tags: ['integration']
+    tags: ['integration'],
+    username: 'activepieces',
+    password: 'password'
   },
   {
     name: 'Calcom',
     link: 'https://cal.codecrumble.diy',
     description: `Calendly successor. You are in charge of your own data, workflow, and appearance. Self-hosted or hosted by us.`,
-    tags: ['calendar']
+    tags: ['calendar'],
+    username: 'calcom',
+    password: 'password'
   },
   {
     name: 'Dollibar',
     link: 'https://dolly.codecrumble.diy',
     description: `Dolibarr ERP & CRM helps manage your organization's activities. Ideal for small to large companies.`,
-    tags: ['crm']
+    tags: ['crm'],
+    username: 'dollibar',
+    password: 'password'
   },
   {
     name: 'Appsmith',
     link: 'https://smith.codecrumble.diy',
     description: `Appsmith is a platform to build custom apps like dashboards, admin panels, and internal tools.`,
-    tags: ['dashboards']
+    tags: ['dashboards'],
+    username: 'appsmith',
+    password: 'password'
   },
   {
     name: 'Castopod',
     link: 'https://castopod.codecrumble.diy/cp-admin',
     description: `Castopod is a podcast hosting solution made for audience engagement and interaction.`,
-    tags: ['media']
+    tags: ['media'],
+    username: 'castopod',
+    password: 'password'
   },
   {
     name: 'Convertx',
     link: 'https://convert.codecrumble.diy',
     description: `An online file converter. Supports over a thousand formats.`,
-    tags: ['tools']
+    tags: ['tools'],
+    username: 'convertx',
+    password: 'password'
   },
   {
     name: 'Cyberchef',
     link: 'https://cyberchef.codecrumble.diy',
     description: `CyberChef is a web app for encoding, encryption, compression, and more cyber operations.`,
-    tags: ['security']
+    tags: ['security'],
+    username: 'cyberchef',
+    password: 'password'
   },
   {
     name: 'Docmost',
     link: 'https://docs.codecrumble.diy',
     description: `A collaborative wiki and documentation software.`,
-    tags: ['wiki']
+    tags: ['wiki'],
+    username: 'docmost',
+    password: 'password'
   },
   {
     name: 'Emby',
     link: 'https://emby.codecrumble.diy',
     description: `Emby Server is a personal media server with multi-device support.`,
-    tags: ['media']
+    tags: ['media'],
+    username: 'emby',
+    password: 'password'
   },
   {
     name: 'FreeScout',
     link: 'https://helpdesk.codecrumble.diy',
     description: `FreeScout is an open source help desk and shared inbox.`,
-    tags: ['support']
+    tags: ['support'],
+    username: 'freescout',
+    password: 'password'
   },
   {
     name: 'FreshRSS',
     link: 'https://rss.codecrumble.diy',
     description: `FreshRSS is a multi-user RSS feed aggregator with anonymous reading.`,
-    tags: ['news']
+    tags: ['news'],
+    username: 'freshrss',
+    password: 'password'
   },
   {
     name: 'Grocy',
     link: 'https://home.codecrumble.diy',
     description: `Grocy is a self-hosted groceries & household management solution.`,
-    tags: ['cooking']
+    tags: ['household'],
+    username: 'grocy',
+    password: 'password'
   },
   {
     name: 'Hoarder (Karakeep)',
     link: 'https://aibookmark.codecrumble.diy',
     description: `Karakeep is a self-hostable bookmark-everything app with AI.`,
-    tags: ['bookmarks']
+    tags: ['bookmarks'],
+    username: 'karakeep',
+    password: 'password'
   },
   {
     name: 'Invoice Ninja',
     link: 'https://invoice.codecrumble.diy',
     description: `Invoice, quote, project and time-tracking app.`,
-    tags: ['invoices']
+    tags: ['invoices'],
+    username: 'invoiceninja',
+    password: 'password'
   },
   {
     name: 'IT Tools',
     link: 'https://ittools.codecrumble.diy',
     description: `Handy online tools for developers, with great UX.`,
-    tags: ['devtools']
+    tags: ['devtools'],
+    username: 'ittools',
+    password: 'password'
   },
   {
     name: 'Leantime',
     link: 'https://leantime.codecrumble.diy',
     description: `Leantime is a project management system for non-project managers.`,
-    tags: ['project']
+    tags: ['project'],
+    username: 'leantime',
+    password: 'password'
   },
   {
     name: 'Mautic5',
     link: 'https://mautic.codecrumble.diy',
     description: `Mautic is a marketing automation product focused on privacy.`,
-    tags: ['marketing']
+    tags: ['marketing'],
+    username: 'mautic5',
+    password: 'password'
   },
   {
     name: 'Whoogle',
     link: 'https://whoogle.codecrumble.diy',
     description: `A self-hosted, ad-free, privacy-respecting metasearch engine.`,
-    tags: ['search']
+    tags: ['search'],
+    username: 'whoogle',
+    password: 'password'
   },
   {
     name: 'Mealie',
     link: 'https://mealie.codecrumble.diy',
     description: `Mealie is a recipe manager, meal planner and shopping list.`,
-    tags: ['cooking']
+    tags: ['household'],
+    username: 'mealie',
+    password: 'password'
   },
   {
     name: 'Memos',
     link: 'https://memos.codecrumble.diy',
     description: `A knowledge management and note-taking platform for privacy-conscious users.`,
-    tags: ['notes']
+    tags: ['notes'],
+    username: 'memos',
+    password: 'password'
   },
   {
     name: 'OpenWeb-UI',
     link: 'https://ai.codecrumble.diy',
     description: `A self-hosted AI platform supporting multiple LLM backends.`,
-    tags: ['platform']
+    tags: ['platform'],
+    username: 'openweb-ui',
+    password: 'password'
   },
   {
     name: 'Plane',
     link: 'https://plane.codecrumble.diy',
     description: `JIRA, Linear, Asana alternative for tracking issues and roadmaps.`,
-    tags: ['dev']
+    tags: ['dev'],
+    username: 'plane',
+    password: 'password'
   },
   {
     name: 'Reactive Resume',
     link: 'https://resume.codecrumble.diy',
     description: `A privacy-first, customizable resume builder.`,
-    tags: ['resume']
+    tags: ['resume'],
+    username: 'reactiveresume',
+    password: 'password'
   },
   {
     name: 'RocketChat',
     link: 'https://rocket.codecrumble.diy',
     description: `The secure communications platform alternative to Slack.`,
-    tags: ['chat']
+    tags: ['chat'],
+    username: 'rocketchat',
+    password: 'password'
   },
   {
     name: 'SearXNG',
     link: 'https://find.codecrumble.diy',
     description: `Free metasearch engine aggregating results from various sources.`,
-    tags: ['search']
+    tags: ['search'],
+    username: 'searxng',
+    password: 'password'
   },
   {
     name: 'Web-Check',
     link: 'https://osint.codecrumble.diy',
     description: `All-in-one OSINT tool for analyzing websites' technologies and vulnerabilities.`,
-    tags: ['security']
+    tags: ['security'],
+    username: 'web-check',
+    password: 'password'
   },
   {
     name: 'Sterling PDF',
     link: 'https://pdf.codecrumble.diy',
     description: `Perform various operations on PDF files (split, merge, compress, etc).`,
-    tags: ['pdf']
+    tags: ['pdf'],
+    username: 'sterlingpdf',
+    password: 'password'
   },
   {
     name: 'Kutt URL Shortener',
     link: 'https://kuttt.co',
     description: `A modern URL shortener with support for custom domains and stats.`,
-    tags: ['url']
+    tags: ['url'],
+    username: 'kutturlshortener',
+    password: 'password'
   },
   {
     name: 'Mattermost',
     link: 'https://slack.trackalways.in',
     description: `A secure collaboration platform for teams and enterprises.`,
-    tags: ['chat']
+    tags: ['chat'],
+    username: 'mattermost',
+    password: 'password'
   },
   {
     name: 'NocoDB',
     link: 'https://noco.codecrumble.diy',
     description: `An Airtable alternative for building online databases.`,
-    tags: ['database']
+    tags: ['database'],
+    username: 'nocodb',
+    password: 'password'
   }
 ];
 
@@ -272,7 +332,9 @@ const Portfolio = () => {
                           <Card className="bg-gray-800 hover:bg-gray-700 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl animate-fadeIn">
                             <CardContent className="p-6">
                               <h2 className="text-xl font-semibold mb-2">{software.name}</h2>
-                              <p className="text-gray-300 text-sm line-clamp-3">{software.description}</p>
+                              <p className="text-gray-300 text-sm line-clamp-3 mb-2">{software.description}</p>
+                              <p className="text-gray-400 text-xs">Username: {software.username}</p>
+                              <p className="text-gray-400 text-xs">Password: {software.password}</p>
                             </CardContent>
                           </Card>
                         </a>
