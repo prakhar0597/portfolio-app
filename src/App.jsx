@@ -258,8 +258,10 @@ const Portfolio = () => {
   const [selectedTag, setSelectedTag] = useState('');
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [tagSortOrder, setTagSortOrder] = useState('asc');
+  const [wasAllClicked, setWasAllClicked] = useState(false);
 
   const tagRefs = useRef({});
+  const firstVisibleTagRef = useRef(null); // Track first visible tag section
   const allTags = getAllTags(softwareList);
   const sortedTags = allTags.sort((a, b) => tagSortOrder === 'asc' ? a.localeCompare(b) : b.localeCompare(a));
 
@@ -281,7 +283,12 @@ const Portfolio = () => {
     if (selectedTag && tagRefs.current[selectedTag]) {
       tagRefs.current[selectedTag].scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }, [selectedTag]);
+
+    if (selectedTag === '' && wasAllClicked && firstVisibleTagRef.current) {
+      firstVisibleTagRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setWasAllClicked(false); // reset
+    }
+  }, [selectedTag, wasAllClicked]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-8 px-4 sm:px-6 lg:px-12">
@@ -298,7 +305,10 @@ const Portfolio = () => {
           <Button
             variant={selectedTag === '' ? 'default' : 'outline'}
             className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-purple-600 hover:to-indigo-600 rounded-full px-4 py-1.5 shadow"
-            onClick={() => setSelectedTag('')}
+            onClick={() => {
+              setSelectedTag('');
+              setWasAllClicked(true);
+            }}
           >
             All
           </Button>
@@ -328,63 +338,84 @@ const Portfolio = () => {
         </div>
 
         <TooltipProvider>
-          {sortedTags.map((tag) => {
-            const taggedItems = filteredList.filter((item) => item.tags?.includes(tag));
-            if (!taggedItems.length) return null;
+          {
+            (() => {
+              firstVisibleTagRef.current = null; // Reset every render
+              firstVisibleTagRef.current = null;
+              return sortedTags.map((tag) => {
+                const taggedItems = filteredList.filter((item) => item.tags?.includes(tag));
+                if (!taggedItems.length) return null;
 
-            return (
-              <div key={tag} ref={el => (tagRefs.current[tag] = el)} className="mb-16">
-                <h2 className="text-3xl font-bold capitalize mb-6 text-blue-400 border-b border-gray-700 pb-2 text-center">
-                  {tagIcons[tag] || '🏷️'} {tag}
-                </h2>
-                <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                  {taggedItems.map((software, index) => (
-                    <Tooltip key={`${tag}-${index}`}>
-                      <TooltipTrigger asChild>
-                        <div
-                          onMouseEnter={() => setHoveredIndex(`${tag}-${index}`)}
-                          onMouseLeave={() => setHoveredIndex(null)}
-                        >
-                          <a href={software.link} target="_blank" rel="noopener noreferrer">
-                            <Card className="backdrop-blur-sm bg-white/10 hover:bg-white/20 hover:ring-2 hover:ring-blue-400/30 transition-all rounded-2xl shadow-xl hover:scale-[1.03] hover:shadow-2xl animate-fadeIn border border-gray-700">
-                              <CardContent className="p-6">
-                                <h2 className="text-xl font-bold mb-2 text-white tracking-wide">
-                                  {software.name}
-                                </h2>
-                                <p className="text-gray-300 text-sm mb-3 line-clamp-3 italic">
-                                  {software.description}
-                                </p>
-                                {software.username && software.password && (
-                                  <div className="text-xs text-gray-400 space-y-1">
-                                    <p><span className="font-semibold text-gray-300">Username:</span> {software.username}</p>
-                                    <p><span className="font-semibold text-gray-300">Password:</span> {software.password}</p>
-                                  </div>
-                                )}
-                              </CardContent>
-                            </Card>
-                          </a>
-                        </div>
-                      </TooltipTrigger>
-                      {hoveredIndex === `${tag}-${index}` && (
-                        <TooltipContent
-                          side="bottom"
-                          sideOffset={12}
-                          className="w-[90vw] max-w-screen-xl min-h-[300px] bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-black/90 backdrop-blur-lg text-white p-6 overflow-hidden rounded-xl border border-gray-700 shadow-2xl animate-fade-in"
-                        >
-                          <iframe
-                            src={software.link}
-                            title={`${software.name} Preview`}
-                            className="w-full h-60 border-none rounded-b-xl"
-                            loading="lazy"
-                          />
-                        </TooltipContent>
-                      )}
-                    </Tooltip>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
+                return (
+                  <div
+                    key={tag}
+                    ref={el => {
+                      tagRefs.current[tag] = el;
+                      if (!firstVisibleTagRef.current) {
+                        firstVisibleTagRef.current = el;
+                      }
+                    }}
+                    className="mb-16"
+                  >
+                    <h2 className="text-3xl font-bold capitalize mb-6 text-blue-400 border-b border-gray-700 pb-2 text-center">
+                      {tagIcons[tag] || '🏷️'} {tag}
+                    </h2>
+                    <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                      {taggedItems.map((software, index) => (
+                        <Tooltip key={`${tag}-${index}`}>
+                          <TooltipTrigger asChild>
+                            <div
+                              onMouseEnter={() => setHoveredIndex(`${tag}-${index}`)}
+                              onMouseLeave={() => setHoveredIndex(null)}
+                            >
+                              <a href={software.link} target="_blank" rel="noopener noreferrer">
+                                <Card className="backdrop-blur-sm bg-white/10 hover:bg-white/20 hover:ring-2 hover:ring-blue-400/30 transition-all rounded-2xl shadow-xl hover:scale-[1.03] hover:shadow-2xl animate-fadeIn border border-gray-700">
+                                  <CardContent className="p-6">
+                                    <h2 className="text-xl font-bold mb-2 text-white tracking-wide">
+                                      {software.name}
+                                    </h2>
+                                    <p className="text-gray-300 text-sm mb-3 line-clamp-3 italic">
+                                      {software.description}
+                                    </p>
+                                    {software.username && software.password && (
+                                      <div className="text-xs text-gray-400 space-y-1">
+                                        <p>
+                                          <span className="font-semibold text-gray-300">Username:</span>{' '}
+                                          {software.username}
+                                        </p>
+                                        <p>
+                                          <span className="font-semibold text-gray-300">Password:</span>{' '}
+                                          {software.password}
+                                        </p>
+                                      </div>
+                                    )}
+                                  </CardContent>
+                                </Card>
+                              </a>
+                            </div>
+                          </TooltipTrigger>
+                          {hoveredIndex === `${tag}-${index}` && (
+                            <TooltipContent
+                              side="bottom"
+                              sideOffset={12}
+                              className="w-[90vw] max-w-screen-xl min-h-[300px] bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-black/90 backdrop-blur-lg text-white p-6 overflow-hidden rounded-xl border border-gray-700 shadow-2xl animate-fade-in"
+                            >
+                              <iframe
+                                src={software.link}
+                                title={`${software.name} Preview`}
+                                className="w-full h-60 border-none rounded-b-xl"
+                                loading="lazy"
+                              />
+                            </TooltipContent>
+                          )}
+                        </Tooltip>
+                      ))}
+                    </div>
+                  </div>
+                );
+              });
+            })()
+          }
         </TooltipProvider>
       </div>
     </div>
