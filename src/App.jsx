@@ -242,8 +242,8 @@ const softwareList = [
     link: 'https://noco.codecrumble.diy',
     description: `An Airtable alternative for building online databases.`,
     tags: ['database'],
-    username: 'demo1234',
-    password: 'demo1234'
+    username: 'uncrumblethecode@gmail.com',
+    password: 'demo@12345'
   }
 ];
 
