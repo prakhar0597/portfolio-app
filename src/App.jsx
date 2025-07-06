@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Card, CardContent } from './components/ui/card';
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from './components/ui/tooltip';
 import { Input } from './components/ui/input';
@@ -259,6 +259,7 @@ const Portfolio = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [tagSortOrder, setTagSortOrder] = useState('asc');
 
+  const tagRefs = useRef({});
   const allTags = getAllTags(softwareList);
   const sortedTags = allTags.sort((a, b) => tagSortOrder === 'asc' ? a.localeCompare(b) : b.localeCompare(a));
 
@@ -275,6 +276,12 @@ const Portfolio = () => {
     security: "🔒", search: "🔍", marketing: "📈", news: "📰", platform: "🌐",
     invoices: "🧾", wiki: "📚"
   };
+
+  useEffect(() => {
+    if (selectedTag && tagRefs.current[selectedTag]) {
+      tagRefs.current[selectedTag].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [selectedTag]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-8 px-4 sm:px-6 lg:px-12">
@@ -326,7 +333,7 @@ const Portfolio = () => {
             if (!taggedItems.length) return null;
 
             return (
-              <div key={tag} className="mb-16">
+              <div key={tag} ref={el => (tagRefs.current[tag] = el)} className="mb-16">
                 <h2 className="text-3xl font-bold capitalize mb-6 text-blue-400 border-b border-gray-700 pb-2 text-center">
                   {tagIcons[tag] || '🏷️'} {tag}
                 </h2>
