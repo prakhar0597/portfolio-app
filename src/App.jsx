@@ -320,11 +320,11 @@ const Portfolio = () => {
   });
 
   const tagIcons = {
-    integration: "🔗", calendar: "📅", crm: "🏢", dashboards: "📊", media: "🎙️",
-    tools: "🛠️", support: "💬", household: "🏠", notes: "📝", chat: "💬",
-    dev: "💻", resume: "📄", pdf: "📑", url: "🔗", database: "🗄️",
-    security: "🔒", search: "🔍", marketing: "📈", news: "📰", platform: "🌐",
-    invoices: "🧾", wiki: "📚", logistics: '🚚', portfolio: '🧩', ecommerce: '🛒'
+    ai: "🤖", integration: "🔗", calendar: "📅", crm: "🏢", dashboards: "📊", media: "🎙️",
+    tools: "🛠️", devtools: "🧰", design: "🎨", support: "💬", household: "🏠", notes: "📝", chat: "💬",
+    dev: "💻", resume: "📄", pdf: "📑", url: "🔗", database: "🗄️", productivity: "⚙️",
+    social: "💬", security: "🔐", search: "🔍", marketing: "📢", news: "📰", platform: "🌐",
+    invoices: "🧾", wiki: "📚", logistics: "🚚", portfolio: "🧩", ecommerce: "🛒"
   };
 
   useEffect(() => {
