@@ -262,9 +262,9 @@ const softwareList = [
     password: ''
   },
   {
-    name: 'Mercitech',
+    name: 'Mercetech',
     link: 'https://mercetech.netlify.app',
-    description: 'Mercitech showcases projects and solutions built on modern web technologies.',
+    description: 'Mercetech showcases projects and solutions built on modern web technologies.',
     tags: ['portfolio'],
     username: '',
     password: ''
