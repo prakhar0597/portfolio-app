@@ -324,7 +324,7 @@ const Portfolio = () => {
     tools: "🛠️", devtools: "🧰", design: "🎨", support: "💬", household: "🏠", notes: "📝", chat: "💬",
     dev: "💻", resume: "📄", pdf: "📑", url: "🔗", database: "🗄️", productivity: "⚙️",
     social: "💬", security: "🔐", search: "🔍", marketing: "📢", news: "📰", platform: "🌐",
-    invoices: "🧾", wiki: "📚", logistics: "🚚", portfolio: "🧩", ecommerce: "🛒"
+    invoices: "🧾", wiki: "📚", logistics: "🚚", portfolio: "🧩", ecommerce: "🛒", project: "🗂️", bookmarks: "🔖" 
   };
 
   useEffect(() => {
