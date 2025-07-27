@@ -388,7 +388,6 @@ const Portfolio = () => {
         <TooltipProvider>
           {
             (() => {
-              firstVisibleTagRef.current = null; // Reset every render
               firstVisibleTagRef.current = null;
               return sortedTags.map((tag) => {
                 const taggedItems = filteredList.filter((item) => item.tags?.includes(tag));
