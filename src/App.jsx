@@ -244,6 +244,54 @@ const softwareList = [
     tags: ['database'],
     username: 'uncrumblethecode@gmail.com',
     password: 'demo@12345'
+  },
+  {
+    name: 'Trackalways India',
+    link: 'https://trackalways.in',
+    description: 'TrackAlways India is a logistics and tracking platform tailored for Indian businesses.',
+    tags: ['logistics'],
+    username: '',
+    password: ''
+  },
+  {
+    name: 'TrackAlways Africa',
+    link: 'https://trackalwaysafrica.com',
+    description: 'TrackAlways Africa offers real-time tracking and logistics solutions across Africa.',
+    tags: ['logistics'],
+    username: '',
+    password: ''
+  },
+  {
+    name: 'Mercitech',
+    link: 'https://mercetech.netlify.app',
+    description: 'Mercitech showcases projects and solutions built on modern web technologies.',
+    tags: ['portfolio'],
+    username: '',
+    password: ''
+  },
+  {
+    name: 'Transpoto',
+    link: 'https://www.transpotofreight.com/',
+    description: 'Transpoto is a freight matching platform designed to connect shippers with transporters.',
+    tags: ['logistics'],
+    username: '',
+    password: ''
+  },
+  {
+    name: 'Encrypted Bug',
+    link: 'https://encryptedbug.com',
+    description: 'Encrypted Bug is a cybersecurity insights and research platform.',
+    tags: ['security'],
+    username: '',
+    password: ''
+  },
+  {
+    name: 'Vegisphere',
+    link: 'https://vegisphere.com',
+    description: 'Vegisphere delivers fresh produce through an online platform tailored for local sourcing.',
+    tags: ['ecommerce'],
+    username: '',
+    password: ''
   }
 ];
 
@@ -276,7 +324,7 @@ const Portfolio = () => {
     tools: "🛠️", support: "💬", household: "🏠", notes: "📝", chat: "💬",
     dev: "💻", resume: "📄", pdf: "📑", url: "🔗", database: "🗄️",
     security: "🔒", search: "🔍", marketing: "📈", news: "📰", platform: "🌐",
-    invoices: "🧾", wiki: "📚"
+    invoices: "🧾", wiki: "📚", logistics: '🚚', portfolio: '🧩', ecommerce: '🛒'
   };
 
   useEffect(() => {
