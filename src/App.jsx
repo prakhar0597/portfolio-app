@@ -321,9 +321,9 @@ const Portfolio = () => {
 
   const tagIcons = {
     ai: "🤖", integration: "🔗", calendar: "📅", crm: "🏢", dashboards: "📊", media: "🎙️",
-    tools: "🛠️", devtools: "🧰", design: "🎨", support: "💬", household: "🏠", notes: "📝", chat: "💬",
+    tools: "🛠️", devtools: "🧰", design: "🎨", support: "📞", household: "🏠", notes: "📝", chat: "💬",
     dev: "💻", resume: "📄", pdf: "📑", url: "🔗", database: "🗄️", productivity: "⚙️",
-    social: "💬", security: "🔐", search: "🔍", marketing: "📢", news: "📰", platform: "🌐",
+    security: "🔐", search: "🔍", marketing: "📢", news: "📰", platform: "🌐",
     invoices: "🧾", wiki: "📚", logistics: "🚚", portfolio: "🧩", ecommerce: "🛒", project: "🗂️", bookmarks: "🔖" 
   };
 
