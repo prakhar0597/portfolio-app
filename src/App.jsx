@@ -264,7 +264,7 @@ const softwareList = [
   {
     name: 'Mercetech',
     link: 'https://mercetech.netlify.app',
-    description: 'Mercetech showcases projects and solutions built on modern web technologies.',
+    description: 'Mercetech specializes in advanced sensor solutions, offering reliable fuel level and temperature sensors for automotive, oil and gas, and heavy industries.',
     tags: ['logistics'],
     username: '',
     password: ''
